@@ -33,6 +33,7 @@ Humanoid rabbit. Organic farmer. Night coder. Knowledge transmitter.
 │   ├── blowfish-launch-token/    # Launch Solana tokens
 │   ├── character-image-studio/   # Visual identity (NeukoAI)
 │   ├── sponge-wallet/            # Multi-chain autonomous wallet
+│   ├── scrapling/                # Advanced web scraping + stealth mode
 │   └── hey-lol/                  # AI agents social platform
 │
 ├── lore/                # Philosophical & narrative texts
@@ -103,6 +104,29 @@ Token $ENKI: `DPpSmea6htoRQpLTdAnGCCdfMJ9awyatjQi3QgRDhJmU`
 - Hyperliquid: `0xba18cdaa2bfdf26c929d045e9bb6f19f9fe1ac75`
 - Daily budget: 0.01 SOL/day (~$0.83)
 - Capabilities: transfers, swaps, bridges, x402 services, Polymarket, Hyperliquid perps
+
+### 🔍 Web Scraping & Forensics
+
+**scrapling/** — Modern web scraping with adaptive element finding + stealth mode
+- Alternative to BeautifulSoup/Scrapy (784x faster parsing)
+- Adaptive element finding (survives website redesigns)
+- Anti-bot bypass (Cloudflare Turnstile support)
+- StealthyFetcher with headless browser
+- MCP server for token-optimized AI extraction
+- Tested on SteamOS (functional despite system deps warnings)
+
+**Scripts:**
+- `scrape.py` — General-purpose scraping CLI
+- `wallet_analyzer.py` — Solana wallet analysis via Solscan (stealth mode)
+
+**Use cases:**
+- Token metrics monitoring (bypass anti-bot)
+- Wallet forensics / drain tracking
+- On-chain transaction tracing
+- Long-term adaptive monitoring
+- Grey mastery tool for data sovereignty
+
+**Repo:** [github.com/D4Vinci/Scrapling](https://github.com/D4Vinci/Scrapling) (v0.4.1)
 
 ### 🎨 Visual Identity
 
@@ -216,14 +240,43 @@ See: [.gitignore](.gitignore)
 
 ## Roadmap
 
+**Full details:** [ROADMAP.md](ROADMAP.md)
+
+### 🔥 Priority #1: Wallet Forensics & Drain Tracker (NEW)
+
+Real-time automated drain tracking for community protection.
+
+**Features:**
+- Monitor compromised wallet in real-time
+- Multi-hop fund tracing (recursive tracking)
+- Pattern recognition (attacker profiling)
+- Telegram alerts + public transparency reports
+- Grey mastery: defensive tool, not offensive
+
+**Motivation:** Scrapling stealth mode can bypass anti-bot systems. Open-source alternative to Chainalysis (thousands of dollars).
+
+**Use case:** Community member gets drained → immediate tracking → evidence for exchange freezes → public documentation.
+
+**Phases:**
+1. MVP: Single wallet tracker
+2. Multi-hop tracing (recursive)
+3. ML pattern detection
+4. Community dashboard (public access)
+
+---
+
 ### Phase 1: Foundation (current)
 - ✅ Autonomous Twitter (validation required)
 - ✅ Biodynamic agriculture skills (lunar + plantnet)
 - ✅ Autonomous wallet (Sponge)
+- ✅ Web scraping + stealth mode (Scrapling)
 - ✅ Integrated lore & philosophy
 - ✅ First Twitter thread (03/03/2026)
 
 ### Phase 2: Progressive Autonomy
+- 🚀 **Wallet forensics & drain tracker** (Priority #1)
+- Holder analytics dashboard ($ENKI transparency)
+- MCP server integration (token optimization)
 - Twitter Phase 2 (rule-based autonomy)
 - Blowfish fee monitoring via heartbeat
 - hey.lol signup (blocked on x402 bug)
