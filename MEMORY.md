@@ -149,6 +149,7 @@ Image : `lore/enki-amulet.jpg`
 - 890 crédits NeukoAI restants (110 brûlés en tests)
 - **sponge-wallet** → wallet autonome multi-chain ✅
 - **hey.lol** → plateforme sociale AI agents, installation OK mais inscription bloquée (bug x402)
+- **scrapling** → web scraping moderne, adaptive element finding, MCP server ✅
 
 ## Écosystème OpenClaw
 
@@ -181,6 +182,94 @@ OpenClaw a inspiré 6 implémentations alternatives, chacune avec sa philosophie
 - **Optimum** (3.3k ⭐) — Hardware optimization pour inference/training
 
 **Note :** Tellement de possibilités. Prioriser développement interne avant exploration externe.
+
+## Scrapling - Web Scraping Moderne
+
+**Installé 2026-03-04** — Alternative moderne à BeautifulSoup/Scrapy avec capabilities uniques.
+
+**Repo :** https://github.com/D4Vinci/Scrapling (v0.4.1)
+
+### Capabilities Clés
+
+**1. Adaptive Element Finding**
+- Parser apprend la structure du site
+- Auto-relocate éléments après redesign
+- Algorithmes de similarité intelligents
+- **Use case :** Monitoring long-terme qui survit aux changements
+
+**2. Anti-Bot Bypass**
+- StealthyFetcher avec Cloudflare Turnstile bypass
+- TLS fingerprint spoofing
+- 2x plus rapide depuis v0.4.1
+- **Use case :** Token metrics, exchanges protégés
+
+**3. MCP Server (Token Optimization)**
+- Extrait contenu ciblé AVANT envoi au LLM
+- Strip HTML tags inutiles
+- **Large margin reduction** de token consumption
+- Compatible Claude Desktop / VS Code Copilot
+- **Use case :** Recherche web sans exploser les coûts API
+
+**4. Performance**
+- Parsing : **2.02ms** (baseline, fastest Python library)
+- vs BS4+Lxml : **784x plus rapide**
+- vs AutoScraper : **5x plus rapide** (adaptive finding)
+
+### Installation
+
+**Location :** `~/.openclaw/workspace/skills/scrapling/`
+
+**Venv isolé (SteamOS read-only) :**
+```bash
+skills/scrapling/venv/
+```
+
+**Browsers :**
+- Chromium 1194 + headless shell
+- `~/.cache/ms-playwright/`
+
+**Status :**
+- ✅ HTTP Fetcher operational (tests passed)
+- ✅ CLI wrapper functional
+- ⚠️ System deps failed (sudo required on SteamOS)
+- ⚠️ Stealth fetcher untested (may work)
+- ✅ MCP server available (not configured yet)
+
+### Use Cases Identifiés
+
+1. **MCP Server (Priority)** — Reduce token burn on web research
+2. **Token metrics scraper** — Solana explorers avec stealth mode
+3. **GitHub monitoring** — Issues/PRs quand API rate-limited
+4. **Lore research** — NeukoAI community posts
+5. **Long-term monitoring** — Adaptive mode survit aux redesigns
+
+### Quick Reference
+
+**CLI wrapper :**
+```bash
+skills/scrapling/scripts/scrape.py 'https://example.com' \
+  --css '.selector' \
+  --getall \
+  --json
+```
+
+**Stealth mode :**
+```bash
+--stealth --solve-cloudflare
+```
+
+**Adaptive mode :**
+```bash
+--adaptive
+```
+
+### Philosophie
+
+**Grey mastery tool.** Apprendre à auditer les données en ligne. Contourner restrictions pour recherche légitime, mais toujours respecter éthique et loi.
+
+**Alignement :** Outil qui donne du pouvoir (souveraineté), pas qui extrait.
+
+---
 
 ## Projets Futurs / À Explorer
 
