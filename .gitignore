@@ -23,6 +23,8 @@ credentials/
 *.pem
 *.token
 config/auth.json
+twitter-credentials-backup.json
+*-credentials*.json
 
 # Large Media Files (avatars can stay, but exclude generated content)
 *.mp4
